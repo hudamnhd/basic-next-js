@@ -11,11 +11,11 @@ export default function Navbar() {
     <nav className="flex space-x-4 pt-4">
       {[
         ["Home", "/"],
-        ["Users", "/users"],
-        ["Static", "/static"],
-        ["Dynamic", "/dynamic"],
-        ["ISR", "/isr"],
-        ["Search", "/search"],
+        ["Users", "/jsonplaceholder/users"],
+        ["Static", "/unsplash/static"],
+        ["Dynamic", "/unsplash/dynamic"],
+        ["ISR", "/unsplash/isr"],
+        ["Search", "/unsplash/search"],
       ].map(([title, path]) => {
         // const isActive = pathname.startsWith(path);
         const isActive = pathname === path;
@@ -39,9 +39,9 @@ export default function Navbar() {
         {toggle && (
           <div className="absolute -left-2 flex flex-col space-y-2 bg-black rounded-md p-2">
             {[
-              ["Apples", "/topics/apples"],
-              ["Health", "/topics/health"],
-              ["Coding", "/topics/coding"],
+              ["Apples", "/unsplash/topics/apples"],
+              ["Health", "/unsplash/topics/health"],
+              ["Coding", "/unsplash/topics/coding"],
             ].map(([title, path]) => {
               // const isActive = pathname.startsWith(path);
               const isActive = pathname === path;

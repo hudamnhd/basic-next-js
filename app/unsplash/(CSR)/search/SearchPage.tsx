@@ -19,7 +19,7 @@ export default function SearchPage() {
         setSearchResult(null);
         setIsError(false);
         setIsLoading(true);
-        const res = await fetch("/api/search?query=" + query);
+        const res = await fetch("/unsplash/api/search?query=" + query);
         const images: UnsplashImage[] = await res.json();
         setSearchResult(images);
       } catch (error) {
