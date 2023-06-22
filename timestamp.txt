@@ -1,0 +1,16 @@
+[x] Intro
+
+export default function Home() {} for pages app/about
+[] Chapter 1: Start Here
+[] Chapter 2: Pages & Layouts
+[] Chapter 3: Fetching Data
+[] Chapter 4: SSG, SSR, ISR
+[] Chapter 5: Small Project
+[] Chapter 6: Blog Website
+[] Chapter 7: Route Handlers
+[] Chapter 8: Build a REST API
+[] Chapter 9: Middleware
+[] Chapter 10: Revalidation 
+[] Chapter 11: Mutations
+[] Chapter 12: Final Project 
+
