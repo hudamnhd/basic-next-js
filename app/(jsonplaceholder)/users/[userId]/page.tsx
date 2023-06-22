@@ -3,9 +3,9 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import UserPosts from "./components/UserPosts";
-import getUser from "@/lib/getUser";
-import getUserPosts from "@/lib/getUserPosts";
-import getAllUsers from "@/lib/getAllUsers";
+import getUser from "../lib/getUser";
+import getUserPosts from "../lib/getUserPosts";
+import getAllUsers from "../lib/getAllUsers";
 
 type Params = {
   params: {

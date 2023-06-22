@@ -1,4 +1,4 @@
-import getAllUsers from "@/lib/getAllUsers";
+import getAllUsers from "./lib/getAllUsers";
 import Link from "next/link";
 
 export default async function UsersPage() {
@@ -7,6 +7,8 @@ export default async function UsersPage() {
 
   const content = (
     <section>
+      <h1 className="text-xl font-semibold">API from JSON Placeholder</h1>
+      <br />
       {users.map((user, index) => {
         return (
           <>
