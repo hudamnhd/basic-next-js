@@ -23,6 +23,7 @@ export default function Page() {
         const data = await res;
         const results: WikiResult[] | null | undefined = data?.query?.pages;
         setDataWiki(results);
+        console.log(results);
       } catch (error) {
         console.error(error);
       } finally {
@@ -75,7 +76,10 @@ export default function Page() {
               </div>
             );
             const content = result?.thumbnail?.source ? (
-              <article className="p-2 max-w-2xl border-b-2 rounded-md hover:scale-[102%] duration-300">
+              <article
+                key={result.pageid}
+                className="p-2 max-w-2xl border-b-2 rounded-md hover:scale-[102%] duration-300"
+              >
                 <div className="flex flex-row-reverse justify-between">
                   <div className="flex flex-col justify-center w-[10%]">
                     <img
@@ -91,7 +95,10 @@ export default function Page() {
                 </div>
               </article>
             ) : (
-              <article className="p-2 max-w-2xl border-b-2 rounded-md hover:scale-[102%] duration-300">
+              <article
+                key={result.pageid}
+                className="p-2 max-w-2xl border-b-2 rounded-md hover:scale-[102%] duration-300"
+              >
                 {itemText}
               </article>
             );

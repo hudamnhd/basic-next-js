@@ -6,7 +6,7 @@ export default async function getWikiResults(query: string) {
     gsrlimit: "20",
     prop: "pageimages|extracts",
     exchars: "100",
-    exinto: "true",
+    exintro: "true",
     explaintext: "true",
     exlimit: "max",
     format: "json",
