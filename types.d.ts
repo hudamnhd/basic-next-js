@@ -29,6 +29,23 @@ type User = {
   };
 };
 
+type WikiResult = {
+  pageid: string;
+  title: string;
+  extract: string;
+  thumbnail?: {
+    source: string;
+    width: number;
+    height: number;
+  };
+};
+
+type WikiSearchResults = {
+  query?: {
+    pages?: WikiResult[];
+  };
+};
+
 type UnsplashImage = {
   description: string;
   user: {

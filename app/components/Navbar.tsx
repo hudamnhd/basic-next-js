@@ -12,6 +12,7 @@ export default function Navbar() {
       {[
         ["Home", "/"],
         ["Users", "/jsonplaceholder/users"],
+        ["Wikisearch", "/wikisearch"],
         ["Static", "/unsplash/static"],
         ["Dynamic", "/unsplash/dynamic"],
         ["ISR", "/unsplash/isr"],
