@@ -40,7 +40,7 @@ export default async function UserPage({ params: { userId } }: Params) {
 
   return (
     <>
-      <Link href="/users">Back</Link>
+      <Link href="/jsonplaceholder/users">Back</Link>
       <h2 className="text-2xl">{user.name}</h2>
       <br />
       <Suspense fallback={<h2>Loading...</h2>}>

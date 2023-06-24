@@ -33,10 +33,10 @@ export default function Page() {
   };
 
   return (
-    <div>
+    <div className="max-w-xl">
       <form
         onSubmit={handleSubmit}
-        className="flex justify-center items-center space-x-1 border-2 rounded-md p-3 max-w-xl"
+        className="flex justify-center items-center space-x-1 border-2 rounded-md p-3"
       >
         <input
           className="px-3 py-1 w-3/4 shadow-md focus:outline-none focus:ring ring-blue-500 rounded-md text-black"
@@ -52,13 +52,15 @@ export default function Page() {
         </button>
       </form>
       <div>
-        {isLoading && <h1>Loading...</h1>}
+        {isLoading && (
+          <h1 className="text-2xl p-4 text-center font-semibold">Loading...</h1>
+        )}
         {isError && <h1>Spmething went wrong. Please try again.</h1>}
         {dataWiki === undefined && (
           <h1>Nothing found. Try a different query</h1>
         )}
       </div>
-      <main className="max-w-xl py-1 min-h-screen space-y-2">
+      <main className="py-1 min-h-screen space-y-2">
         {dataWiki &&
           Object.values(dataWiki).map((result) => {
             const itemText = (

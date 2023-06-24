@@ -15,7 +15,7 @@ export default async function UsersPage() {
             <p key={user.id}>
               <Link
                 className="opacity-80 hover:opacity-100"
-                href={`/users/${user.id}`}
+                href={`/jsonplaceholder/users/${user.id}`}
               >
                 {index + 1}. {user.name}
               </Link>
