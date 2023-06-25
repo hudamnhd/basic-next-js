@@ -57,29 +57,31 @@ export default function SearchUsers() {
           User Not Found
         </h1>
       ) : (
-        <div className="w-4/5 mx-auto space-y-2 border-2 border-gray-500 rounded-md m-2 py-2 overflow-y-auto h-[500px]">
-          {users?.map((user) => (
-            <div
-              className="flex max-w-[95%] mx-auto items-center space-x-3 bg-slate-800 rounded-md py-2 px-6  border-b-2 border-gray-500"
-              key={user.id}
-            >
-              <img
-                className="w-12 rounded-2xl ring-2 ring-gray-500"
-                src={user.avatar_url}
-                alt={user.login}
-              />
-              <div>
-                <p className="text-lg font-semibold">{user.login}</p>
-                <a
-                  href={user.html_url}
-                  className="font-medium hover:text-blue-500"
-                >
-                  {user.html_url}
-                </a>
+        users && (
+          <div className="w-4/5 mx-auto space-y-2 border-2 border-gray-500 rounded-md m-2 py-2 overflow-y-auto h-[500px]">
+            {users?.map((user) => (
+              <div
+                className="flex max-w-[95%] mx-auto items-center space-x-3 bg-slate-800 rounded-md py-2 px-6  border-b-2 border-gray-500"
+                key={user.id}
+              >
+                <img
+                  className="w-12 rounded-2xl ring-2 ring-gray-500"
+                  src={user.avatar_url}
+                  alt={user.login}
+                />
+                <div>
+                  <p className="text-lg font-semibold">{user.login}</p>
+                  <a
+                    href={user.html_url}
+                    className="font-medium hover:text-blue-500"
+                  >
+                    {user.html_url}
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )
       )}
     </div>
   );

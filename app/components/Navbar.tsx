@@ -14,6 +14,7 @@ export default function Navbar() {
         ["Users", "/jsonplaceholder/users"],
         ["Wikisearch", "/wikisearch"],
         ["Githubsearch", "/githubsearch"],
+        ["Feedback", "/feedback"],
         ["Static", "/unsplash/static"],
         ["Dynamic", "/unsplash/dynamic"],
         ["ISR", "/unsplash/isr"],
