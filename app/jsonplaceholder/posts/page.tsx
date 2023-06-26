@@ -18,7 +18,7 @@ export default async function Posts() {
       </div>
       <AddPost dataPosts={data} />
       {data?.map((post, index: number) => (
-        <Post {...post} index={index} />
+        <Post key={post.id} {...post} index={index} />
       ))}
     </div>
   );
