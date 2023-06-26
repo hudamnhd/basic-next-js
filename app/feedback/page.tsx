@@ -14,6 +14,7 @@ export default function Feedback() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const { name, email, message } = data;
+    console.log(JSON.stringify(data));
     const res = await fetch("http://localhost:3000/feedback/api", {
       method: "POST",
       headers: {

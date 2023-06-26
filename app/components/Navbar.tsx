@@ -12,6 +12,7 @@ export default function Navbar() {
       {[
         ["Home", "/"],
         ["Users", "/jsonplaceholder/users"],
+        ["Post", "/jsonplaceholder/posts"],
         ["Wikisearch", "/wikisearch"],
         ["Githubsearch", "/githubsearch"],
         ["Feedback", "/feedback"],
