@@ -6,7 +6,8 @@ export default async function Posts() {
     cache: "no-store",
   });
 
-  const data: Post[] = await res.json();
+  const result: Post[] = await res.json();
+  const data = await result.reverse();
   return (
     <div className="relative space-y-2">
       <div className="p-3 rounded-md bg-blue-100 text-blue-600 ">

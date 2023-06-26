@@ -31,12 +31,9 @@ export default function AddPost({ dataPosts }: Props) {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const newId = dataPosts.length > 0 ? dataPosts[dataPosts.length - 1].id : 0;
+    const newId = dataPosts.length > 0 ? dataPosts[0].id : 0;
     const newUserId =
-      newId % 10 === 0
-        ? dataPosts[dataPosts.length - 1].userId + 1
-        : dataPosts[dataPosts.length - 1].userId;
-
+      newId % 10 === 0 ? dataPosts[0].userId + 1 : dataPosts[0].userId;
     const newPost = {
       userId: newUserId,
       id: newId + 1,
