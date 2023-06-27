@@ -8,7 +8,7 @@ export default function Navbar() {
   const [toggle, setToggle] = useState(false);
   const pathname = usePathname();
   return (
-    <nav className="flex space-x-4 pt-4">
+    <nav className="flex space-x-4 pt-4 mb-4">
       {[
         ["Home", "/"],
         ["Users", "/jsonplaceholder/users"],
@@ -21,8 +21,8 @@ export default function Navbar() {
         ["ISR", "/unsplash/isr"],
         ["Search", "/unsplash/search"],
       ].map(([title, path]) => {
-        // const isActive = pathname.startsWith(path);
-        const isActive = pathname === path;
+        const isActive = pathname.startsWith(path);
+        //const isActive = pathname === path;
         return (
           <Link
             key={title}

@@ -6,6 +6,8 @@ export default async function Posts() {
     cache: "no-store",
   });
 
+  if (!res.ok) return <h1>Error fetching data</h1>;
+
   const result: Post[] = await res.json();
   const data = await result.reverse();
   return (
